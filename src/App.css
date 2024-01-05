@@ -280,7 +280,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/* Default App CSS */
+/****************** About Me CSS *******************/
+/* Center the entire About Me section */
+.aboutme .Container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add some margin to the image for spacing */
+.aboutme .Col img {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+
+/****************** Default App CSS *******************/
 
 .App {
   text-align: left;
