@@ -59,7 +59,9 @@ export const NavBar = () => {
                     <a href="https://github.com/JeelVekaria"><img src={navIcon2} alt="github" /></a>
                     <a href="mailto:jeel.vekaria@torontomu.ca"><img src={navIcon3} alt="gmail" /></a>
                 </div>
-                <button className="vvd" onClick={() => console.log('connect')}> <span>Let's Connect</span></button>
+                <a href="https://linktr.ee/jeelvekaria">
+                    <button className="vvd" onClick={() => console.log('connect')}> <span>Let's Connect</span></button>
+                </a>
             </span>
           </Navbar.Collapse>
         </Container>

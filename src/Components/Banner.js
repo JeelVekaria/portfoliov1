@@ -67,7 +67,9 @@ export const Banner = () => {
                             {`Hi I'm Jeel, a `}<span className="wrap">{text}</span>
                         </h1>
                         <p>I'm a 2nd year computer science student at Toronto Metropolitan University</p>
-                        <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/></button>
+                        <a href="https://linktr.ee/jeelvekaria">
+                            <button onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle size={25}/></button>
+                        </a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img"/>
