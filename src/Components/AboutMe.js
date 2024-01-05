@@ -17,10 +17,15 @@ export const AboutMe = () => {
         {/* Description about me*/}
         <Col md={6}>
           <div>
-            <h2>About Me</h2>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat magna sed blandit mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed feugiat quam elit, at consectetur risus blandit eget. Suspendisse nec pharetra mauris, non congue felis. Sed sit amet orci a ligula molestie pellentesque. Etiam bibendum arcu quam, sed malesuada massa facilisis non. Mauris ullamcorper efficitur diam, ac lobortis ex tempus mattis. Vestibulum tristique ligula vel elit porta, a varius mi varius. Quisque a convallis nibh. Nunc ut nisl id odio mattis blandit in ac neque.
-            </p>
+            <h1>HI THERE👋</h1>
+            <h3>I am a computer programmer who :</h3>
+            <ul>
+                <li>Enjoys eating cheese</li>
+                <li>Enjoys eating cheese</li>
+                <li>Enjoys eating cheese</li>
+                <li>Enjoys eating cheese</li>
+                <li>Enjoys eating cheese</li>
+            </ul>
           </div>
         </Col>
       </Row>

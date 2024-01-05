@@ -299,23 +299,60 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .aboutme{
   width:100%;
   height:95vh;
-  background-color: #61dafb;
+  background-color: #11002645;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Add some margin to the image for spacing */
-.aboutme .Col img {
-  margin-right: 20px; /* Adjust as needed */
+.aboutme img {
+  width:100%;
 }
+
+/****************** Skills CSS *******************/
+/* SkillsSection.css */
+.skills img {
+  width:80%
+}
+
+.skills .skill-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills .skill-item:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.skills .skills-box {
+
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.skills .skills-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .skills .skill-item {
+    margin-bottom: 15px;
+  }
+}
+
 
 
 /****************** Default App CSS *******************/
 
 .App {
   text-align: left;
-  content: 'chub';
+  content: '';
 }
 
 .App-logo {
