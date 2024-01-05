@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState, useEffect } from "react";
 import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon1 from '../assets/img/linkedinIcon.svg';
+import navIcon2 from '../assets/img/githubIcon.svg';
+import navIcon3 from '../assets/img/gmailIcon.svg';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -38,7 +38,7 @@ export const NavBar = () => {
         <Container>
           <Navbar.Brand href="#home">
             {/* Replace Image */}
-            <img src={logo} alt="Logo"/>
+            <img src={logo} className="logo" alt="Logo" width="50" height="50"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             {/* For Mobile */}
@@ -55,9 +55,9 @@ export const NavBar = () => {
             <span className="navbar-text">
                 {/* Social Icons */}
                 <div className="social-icon">
-                    <a href="#"><img src={navIcon1} alt="" /></a>
-                    <a href="#"><img src={navIcon2} alt="" /></a>
-                    <a href="#"><img src={navIcon3} alt="" /></a>
+                    <a href="https://www.linkedin.com/in/jeelvekaria"><img src={navIcon1} alt="linkedin" /></a>
+                    <a href="https://github.com/JeelVekaria"><img src={navIcon2} alt="github" /></a>
+                    <a href="mailto:jeel.vekaria@torontomu.ca"><img src={navIcon3} alt="gmail" /></a>
                 </div>
                 <button className="vvd" onClick={() => console.log('connect')}> <span>Let's Connect</span></button>
             </span>

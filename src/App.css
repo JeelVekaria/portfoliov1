@@ -15,7 +15,7 @@
   font-weight: 400;
 }
 
-/* Default CSS */
+/************ Default Css ************/
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +42,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
 }
 
+.logo{
+  width: 60%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 
 /************************** Navbar Css **************************/
 
