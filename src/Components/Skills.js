@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { useTrail, animated } from 'react-spring';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useTrail, animated, config } from 'react-spring';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import gridButton from '../assets/img/gridButton.svg';
+import listButton from '../assets/img/listButton.svg';
 
 import css from '../assets/img/cssLogo.svg';
 import html from '../assets/img/htmlLogo.svg';
@@ -55,98 +58,167 @@ export const Skills = () => {
       { name: 'Unity', image: unity }
       // { name: 'Vim', image: vim }, //didnt add for design purposes (adds a new line with only 1 language)
     ];
-    
-// State to check if each section is in view
-const [programmingInView, setProgrammingInView] = useState(false);
-const [developerToolsInView, setDeveloperToolsInView] = useState(false);
+    // State to check if each section is in view
+  const [programmingInView, setProgrammingInView] = useState(false);
+  const [developerToolsInView, setDeveloperToolsInView] = useState(false);
+  const [isListView, setIsListView] = useState(false);
 
-// Effect to determine if the component is in view
-useEffect(() => {
-  const handleScroll = () => {
-    // Ajusts how much into the scroll user needs to do for animation to appear, less value = closer to component
-    const offset = window.innerHeight / 1.4; // for Programming section
-    const offset2 = window.innerHeight / 1.2; // for Developer Tools section
+  // Effect to determine if the component is in view
+  useEffect(() => {
+    const handleScroll = () => {
+      // Adjusts how much into the scroll user needs to do for animation to appear, less value = closer to component
+      const offset = window.innerHeight / 1.4; // for Programming section
+      const offset2 = window.innerHeight / 1.1; // for Developer Tools section
 
-    // Check if Programming Skills section is in view
-    const isProgrammingInView =
-    window.scrollY + offset >= document.getElementById('programming-section').offsetTop &&
-    window.scrollY <=
-    document.getElementById('programming-section').offsetTop +
-    document.getElementById('programming-section').offsetHeight;
-    setProgrammingInView(isProgrammingInView);
-    
-    // Check if Developer Tools section is in view
-    const isDeveloperToolsInView =
-    window.scrollY + offset2 >= document.getElementById('developer-tools-section').offsetTop &&
-    window.scrollY <=
-      document.getElementById('developer-tools-section').offsetTop +
-      document.getElementById('developer-tools-section').offsetHeight;
-    setDeveloperToolsInView(isDeveloperToolsInView);
-  };
+      // Check if Programming Skills section is in view
+      const isProgrammingInView =
+        window.scrollY + offset >= document.getElementById('programming-section').offsetTop &&
+        window.scrollY <=
+          document.getElementById('programming-section').offsetTop +
+          document.getElementById('programming-section').offsetHeight;
+      setProgrammingInView(isProgrammingInView);
 
-  // Attach event listener for scroll
-  window.addEventListener('scroll', handleScroll);
+      // Check if Developer Tools section is in view
+      const isDeveloperToolsInView =
+        window.scrollY + offset2 >= document.getElementById('developer-tools-section').offsetTop &&
+        window.scrollY <=
+          document.getElementById('developer-tools-section').offsetTop +
+          document.getElementById('developer-tools-section').offsetHeight;
+      setDeveloperToolsInView(isDeveloperToolsInView);
+    };
 
-  // Cleanup event listener on component unmount
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+    // Attach event listener for scroll
+    window.addEventListener('scroll', handleScroll);
 
-// Animation configuration for fade-in effect
-const fadeInAnimationProgrammingSkills = useTrail(programmingSkills.length, {
-  opacity: programmingInView ? 1 : 0,
-  from: { opacity: 0 },
-});
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-// Animation configuration for fade-in effect of developer tools
-const fadeInAnimationDeveloperTools = useTrail(developerTools.length, {
-  opacity: developerToolsInView ? 1 : 0,
-  from: { opacity: 0 },
-});
+  // Animation configuration for fade-in effect
+  const fadeInAnimationProgrammingSkills = useTrail(programmingSkills.length, {
+    opacity: programmingInView ? 1 : 0,
+    from: { opacity: 0 },
+  });
+
+  // Animation configuration for fade-in effect of developer tools
+  const fadeInAnimationDeveloperTools = useTrail(developerTools.length, {
+    opacity: developerToolsInView ? 1 : 0,
+    from: { opacity: 0 },
+  });
+
+ // Animation configuration for slide-in effect
+ const slideInAnimation = useTrail(
+  isListView ? programmingSkills.length + developerTools.length : 0,
+  {
+    opacity: 1,
+    transform: 'translateX(0)',
+    from: { opacity: 0, transform: 'translateX(50px)' },
+    config: config.gentle, // Adjust the config as needed
+  }
+);
+
+const toggleLayout = () => {
+  setIsListView(!isListView);
+};
 
 return (
-    <section className="skills my-5">
-      <Container>
-        <h1 className="text-center">Skills</h1>
-        <Row className="text-center">
-          {/* Programming Skills Box */}
-          <Col md={12}>
-            <div id="programming-section" className="skills-box">
-              <h2>Programming</h2>
+  <section className="skills my-5" id="skills">
+    <Container>
+      {/* Title & button */}
+      <div className="headerBox">
+        <div className="title">
+          <h1>Skills</h1>
+        </div>
+        
+        <div className="toggleButton">
+          <Button onClick={toggleLayout}>
+            {isListView ? 
+            <img src={gridButton} alt="Toggle Button"/>: 
+            <img src={listButton} alt="Toggle Button"/>}
+          </Button>
+        </div>
+      </div>
+
+      <Row className="text-center">
+        {/* Programming Skills Box */}
+        <Col md={12}>
+          <div
+            id="programming-section"
+            className={`skills-box ${isListView ? 'list-view' : ''}`}
+          >
+            <h2>Programming</h2>
+            {isListView ? (
+              <Row className="justify-content-center">
+                {/* goes through each programming language and places the image with text */}
+                {slideInAnimation.map((props, index) => (
+                  <Col key={index} xs={6} sm={4} md={2}>
+                    <animated.div style={props} className="list-item">
+                      <p>{programmingSkills[index]?.name}</p>
+                    </animated.div>
+                  </Col>
+                ))}
+              </Row>
+            ) : (
               <Row>
-                {/* goes through each programming languages and places the image with text */}
+                {/* goes through each programming language and places the image with text */}
                 {fadeInAnimationProgrammingSkills.map((props, index) => (
                   <Col key={index} xs={6} sm={4} md={2}>
                     <animated.div style={props} className="skill-item">
-                      <img src={programmingSkills[index].image} alt={programmingSkills[index].name} className="img-fluid" />
-                      <p>{programmingSkills[index].name}</p>
+                      <img
+                        src={programmingSkills[index]?.image}
+                        alt={programmingSkills[index]?.name}
+                        className="img-fluid"
+                      />
+                      <p>{programmingSkills[index]?.name}</p>
                     </animated.div>
                   </Col>
                 ))}
               </Row>
-            </div>
-          </Col>
+            )}
+          </div>
+        </Col>
 
-          {/* Developer Tools Box */}
-          <Col md={12}>
-            <div id="developer-tools-section" className="skills-box">
-              <h2>Developer Tools</h2>
+        {/* Developer Tools Box */}
+        <Col md={12}>
+          <div
+            id="developer-tools-section"
+            className={`skills-box ${isListView ? 'list-view' : ''}`}
+          >
+            <h2>Developer Tools</h2>
+            {isListView ? (
+              <Row className="justify-content-center">
+                {/* goes through each developer tool and places the image with text */}
+                {slideInAnimation.map((props, index) => (
+                  <Col key={index} xs={4} md={2}>
+                    <animated.div style={props} className="list-item">
+                      <p>{developerTools[index]?.name}</p>
+                    </animated.div>
+                  </Col>
+                ))}
+              </Row>
+            ) : (
               <Row>
-                {/* goes through each develops tools and places the image with text */}
+                {/* goes through each developer tool and places the image with text */}
                 {fadeInAnimationDeveloperTools.map((props, index) => (
                   <Col key={index} xs={4} md={2}>
                     <animated.div style={props} className="skill-item">
-                      <img src={developerTools[index].image} alt={developerTools[index].name} className="img-fluid"/>
-                      <p>{developerTools[index].name}</p>
+                      <img
+                        src={developerTools[index]?.image}
+                        alt={developerTools[index]?.name}
+                        className="img-fluid"
+                      />
+                      <p>{developerTools[index]?.name}</p>
                     </animated.div>
                   </Col>
                 ))}
               </Row>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+            )}
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  </section>
 );
 };

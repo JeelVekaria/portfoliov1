@@ -320,6 +320,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width:80%
 }
 
+.skills Button{
+  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: none;
+  background: white !important;
+}
+
+
+.skills .headerBox {
+  display: flex;
+  align-items: center;
+}
+.skills .title{
+  margin-left:auto;
+  padding-left:90px;
+}
+
+
+.skills .toggleButton {
+  margin-left: auto; /* Adjust the margin as needed to create space between title and button */
+  margin-right:60px;
+}
+
 .skills .skill-item {
   position: relative;
   overflow: hidden;
