@@ -16,6 +16,15 @@ import ruby from '../assets/img/rubyLogo.svg';
 import mysql from '../assets/img/mysqlLogo.svg';
 import awk from '../assets/img/awkLogo.svg'; //didnt add for design purposes (adds a new line with only 1 language)
 
+import git from '../assets/img/gitLogo.svg';
+import vscode from '../assets/img/vscodeLogo.svg';
+import eclipse from '../assets/img/eclipseLogo.svg';
+import ubuntu from '../assets/img/ubuntuLogo.svg';
+import figma from '../assets/img/figmaLogo.svg';
+import emacs from '../assets/img/emacsLogo.svg';
+import vim from '../assets/img/vimLogo.svg';
+
+
 
 export const Skills = () => {
     const url = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
@@ -35,8 +44,13 @@ export const Skills = () => {
       // Add more programming skills as needed
     ];
     const developerTools = [
-      { name: 'Git', image: "python/python-original.svg" },
-      // Add more developer tools as needed
+      { name: 'Git', image: git },
+      { name: 'Vscode', image: vscode },
+      { name: 'Eclipse', image: eclipse },
+      { name: 'Linux (Ubuntu)', image: ubuntu },
+      { name: 'Figma', image: figma },
+      { name: 'Emacs', image: emacs }
+      // { name: 'Vim', image: vim }, //didnt add for design purposes (adds a new line with only 1 language)
     ];
     return(
     <section className="skills my-5">
@@ -68,7 +82,7 @@ export const Skills = () => {
               {developerTools.map((tool, index) => (
                   <Col key={index} xs={4} md={2}>
                   <div className="skill-item">
-                    <img src={url+tool.image} alt={tool.name} className="img-fluid" />
+                    <img src={tool.image} alt={tool.name} className="img-fluid" />
                     <p>{tool.name}</p>
                   </div>
                 </Col>
