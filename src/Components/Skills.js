@@ -13,6 +13,7 @@ import c from '../assets/img/cLogo.svg';
 import csharp from '../assets/img/csLogo.svg';
 import perl from '../assets/img/perlLogo.svg';
 import ruby from '../assets/img/rubyLogo.svg';
+import php from '../assets/img/phpLogo.svg';
 import mysql from '../assets/img/mysqlLogo.svg';
 import awk from '../assets/img/awkLogo.svg'; //didnt add for design purposes (adds a new line with only 1 language)
 
@@ -22,6 +23,7 @@ import eclipse from '../assets/img/eclipseLogo.svg';
 import ubuntu from '../assets/img/ubuntuLogo.svg';
 import figma from '../assets/img/figmaLogo.svg';
 import emacs from '../assets/img/emacsLogo.svg';
+import unity from '../assets/img/unityLogo.svg';
 import vim from '../assets/img/vimLogo.svg';
 
 
@@ -30,13 +32,16 @@ export const Skills = () => {
     const url = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
     const programmingSkills = [
       { name: 'Python', image: `${url}/python/python-original.svg` },
+      { name: 'Java', image: `${url}/java/java-original.svg` },
       { name: 'Bash', image: `${url}/bash/bash-original.svg` },
       { name: 'JavaScript', image: js },
       { name: 'HTML', image: html },
       { name: 'CSS', image: css },
-      { name: 'Common Lisp', image: lisp },
+      // { name: 'Common Lisp', image: lisp },
+
+      { name: 'PHP', image: php },
       { name: 'C', image: c },
-      { name: 'C++', image: cpp },
+      // { name: 'C++', image: cpp }, not that experienced
       { name: 'C#', image: csharp },
       { name: 'Perl', image: perl },
       { name: 'Ruby', image: ruby },
@@ -49,33 +54,33 @@ export const Skills = () => {
       { name: 'Eclipse', image: eclipse },
       { name: 'Linux (Ubuntu)', image: ubuntu },
       { name: 'Figma', image: figma },
-      { name: 'Emacs', image: emacs }
+      { name: 'Unity', image: unity }
       // { name: 'Vim', image: vim }, //didnt add for design purposes (adds a new line with only 1 language)
     ];
     return(
     <section className="skills my-5">
     <Container>
-        <h1 className="text-center">Skills</h1>
+        <h1 className="text-center display-4">Skills</h1>
       <Row className="text-center">
         {/* Programming Skills Box */}
-        <Col md={12}>
+        <center><Col md={10}>
           <div className="skills-box">
             <h2>Programming</h2>
             <Row>
               {programmingSkills.map((skill, index) => (
-                  <Col key={index} xs={6} sm={4} md={2} >
+                <Col key={index} xs={6} sm={4} md={2} >
                   <div className="skill-item">
-                    <img src={skill.image} alt={skill.name} className="img-fluid" />
+                    <img src={skill.image} alt={skill.name} className="img-fluid skills-icon" />
                     <p>{skill.name}</p>
                   </div>
                 </Col>
               ))}
             </Row>
           </div>
-        </Col>
+        </Col></center>
 
         {/* Developer Tools Box */}
-        <Col md={12}>
+        <center><Col md={10}>
           <div className="skills-box">
             <h2>Developer Tools</h2>
             <Row>
@@ -89,7 +94,7 @@ export const Skills = () => {
               ))}
             </Row>
           </div>
-        </Col>
+        </Col></center>
       </Row>
     </Container>
             </section>
