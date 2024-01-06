@@ -277,9 +277,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   animation: updown 3s linear infinite;
 }
 
-.skills-icon{
-  max-width: 20%;
-}
+
 
 /* Animating image to bounce up and down */
 @keyframes updown {
@@ -316,8 +314,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /****************** Skills CSS *******************/
 /* SkillsSection.css */
+
+.skills{
+  background-color: #121212;
+}
+
+
 .skills img {
   width:75%
+}
+.skills .badgeIcon{
+  height:30px;
+  width:auto;
 }
 
 .skills Button{
@@ -355,6 +363,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .skills .skill-item:hover {
   transform: scale(1.1) rotate(2deg);
+  cursor: default;
 }
 
 .skills .skills-box {
@@ -420,6 +429,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .tag:hover {
   transform: scale(1.1);
 	filter:  brightness(120%) ;
+  cursor: default;
 }
 
 /****************** Default App CSS *******************/
@@ -463,3 +473,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: rotate(360deg);
   }
 }
+
+/* html{
+  scroll-snap-type: y proximity;
+}
+section {
+  scroll-snap-align: start;
+}
+section .skills{
+  margin-bottom: 90px;
+} */

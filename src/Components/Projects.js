@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Carousel } from 'react-bootstrap';
-import { useTrail, animated } from 'react-spring';
+import { useTrail, animated, useSpring } from 'react-spring';
 
+// placeholder
 import portfolio from "../assets/img/portfolio1.png"
 
+// projects
+import project01a from "../assets/img/project01a.png"
+import project01b from "../assets/img/project01b.png"
+import project01c from "../assets/img/project01c.png"
+
 export const Projects = () => {
+  // programming language badges
   let python = "https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white",
   java = "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white",
   js = "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
@@ -25,10 +32,10 @@ export const Projects = () => {
   react = "https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black";
   
   const projectsData = [
-    {
-      id: 1,
-      name: 'Project Name',
-      summary: 'Short project summary.',
+    /*{
+      
+      name: 'Template',
+      summary: 'Short project summary',
       tags: [python, java, js, c,
         cs,
         bash,
@@ -48,8 +55,17 @@ export const Projects = () => {
       details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
       link: 'https://project1.com',
     },
+    */
     {
-      id: 1,
+      name: 'Portfolio',
+      summary: 'A personal portfolio made from React to store all my current & upcoming projects.',
+      tags: [react, js, html, css, bootstrap],
+      images: [project01a, project01b, project01c],
+      details: 'A personal portfolio project where I used React for my first time. Luckily I was experienced in using HTML/CSS/Javascript & Bootstrap from my Web Development class, so learning React from scratch wasn\'t too difficult. A huge part of the graphics was made/edited using Figma which I\'ve been using for over 5 years. I plan on making more websites using different frameworks such as Angular and Django sometime, so keep an eye out on my project tab if they pop up!',
+      link: 'https://project1.com',
+    },
+    {
+      
       name: 'Project Name',
       summary: 'Short project summary.',
       tags: [python, java, js, c,
@@ -60,7 +76,7 @@ export const Projects = () => {
       link: 'https://project1.com',
     },
     {
-      id: 1,
+      
       name: 'Project Name',
       summary: 'Short project summary.',
       tags: [python, java, js, c,
@@ -71,7 +87,7 @@ export const Projects = () => {
       link: 'https://project1.com',
     },
     {
-      id: 1,
+      
       name: 'Project Name',
       summary: 'Short project summary.',
       tags: [python, java, js, c,
@@ -82,7 +98,7 @@ export const Projects = () => {
       link: 'https://project1.com',
     },
     {
-      id: 1,
+      
       name: 'Project Name',
       summary: 'Short project summary.',
       tags: [python, java, js, c,
@@ -93,7 +109,84 @@ export const Projects = () => {
       link: 'https://project1.com',
     },
     {
-      id: 1,
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
+      name: 'Project Name',
+      summary: 'Short project summary.',
+      tags: [python, java, js, c,
+        cs,
+  ],
+      images: [portfolio, portfolio, portfolio],
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
+      link: 'https://project1.com',
+    },
+    {
+      
       name: 'Project Name',
       summary: 'Short project summary.',
       tags: [python, java, js, c,
@@ -104,9 +197,10 @@ export const Projects = () => {
       link: 'https://project1.com',
     },
   ];
-
-  const [showModal, setShowModal] = useState(false);
+const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [projectsInView, setProjectsInView] = useState(false);
+
 
   const handleCardClick = (project) => {
     setSelectedProject(project);
@@ -117,49 +211,75 @@ export const Projects = () => {
     setShowModal(false);
   };
 
-  const fadeInAnimation = useTrail(projectsData.length, {
-    opacity: 1,
-    from: { opacity: 0 },
+
+  // Effect to determine if the component is in view
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.innerHeight / 1.4;
+
+      // Check if Projects section is in view
+      const isProjectsInView =
+        window.scrollY + offset >= document.getElementById('projects').offsetTop &&
+        window.scrollY <=
+          document.getElementById('projects').offsetTop +
+          document.getElementById('projects').offsetHeight;
+      setProjectsInView(isProjectsInView);
+    };
+
+    // Attach event listener for scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Animation configuration for slide-up effect
+  const slideUpAnimation = useSpring({
+    opacity: projectsInView ? 1 : 0,
+    transform: projectsInView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 40px, 0)',
+    from: { opacity: 0, transform: 'translate3d(0, 40px, 0)' },
   });
 
   return (
     <section className="projects my-5" id="projects">
       <Container>
-
         <h1 className="text-center mb-4">Projects</h1>
 
         {/* centers content */}
         <Row className="text-center">
           {/* fading animation */}
-          {fadeInAnimation.map((props, index) => (
-            <Col key={index} xs={12} sm={6} md={4} lg={4} xl={4}>
-              <animated.div style={props}>
+          <Col xs={12}>
+            <animated.div style={slideUpAnimation}>
+              {/* cards */}
+              <Row>
+                {projectsData.map((project, index) => (
+                  <Col key={index} xs={12} sm={6} md={4} lg={4} xl={4}>
+                    <Card className="mb-4" onClick={() => handleCardClick(project)} style={{ cursor: 'pointer' }}>
+                      {/* project cover image */}
+                      <Card.Img variant="top" src={`${project.images[0]}`} />
 
-                {/* cards */}
-                <Card className="mb-4" onClick={() => handleCardClick(projectsData[index])} style={{ cursor: 'pointer' }}>
-                  {/* project cover image */}
-                  <Card.Img variant="top" src={`${projectsData[index].images[0]}`} />
+                      {/* project name & short summary */}
+                      <Card.Body>
+                        <Card.Title>{project.name}</Card.Title>
+                        <Card.Text>{project.summary}</Card.Text>
 
-                  {/* project name & short summary */}
-                  <Card.Body>
-                    <Card.Title>{projectsData[index].name}</Card.Title>
-                    <Card.Text>{projectsData[index].summary}</Card.Text>
-
-                    {/* tags */}
-                    <div className="tags">
-                      {projectsData[index].tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className={`tag ${tag.toLowerCase()}-tag`}>
-                          <img src={tag} alt="project cover"/> 
-                        </span>
-                      ))}
-                    </div>
-
-                  </Card.Body>
-                </Card>
-
-              </animated.div>
-            </Col>
-          ))}
+                        {/* tags */}
+                        <div className="tags">
+                          {project.tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className={`tag ${tag.toLowerCase()}-tag`}>
+                              <img src={tag} alt="project cover"/>
+                            </span>
+                          ))}
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </animated.div>
+          </Col>
         </Row>
       </Container>
 

@@ -10,7 +10,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     // Determines how fast each letter appears after each letter is typed
     const [delta, setDelta] = useState(300-Math.random() * 100);
-    const period = 2000;
+    const period = 1000;
 
     // delta is the iterval when tick is going off
     useEffect(() =>{
@@ -50,7 +50,7 @@ export const Banner = () => {
             // stop deleting, and start adding text by increasing loopNum to +1
             setIsDeleting(false);
             setLoopNum(loopNum+1);
-            setDelta(500);
+            setDelta(200);
         }
     }
 

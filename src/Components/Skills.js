@@ -31,31 +31,33 @@ import vim from '../assets/img/vimLogo.svg';//didnt add for design purposes (add
 
 
 export const Skills = () => {
-    const url = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
-    const programmingSkills = [
-      { name: 'Python', image: `${url}/python/python-original.svg` },
-      { name: 'Java', image: `${url}/java/java-original.svg` },
-      { name: 'Bash', image: `${url}/bash/bash-original.svg` },
-      { name: 'JavaScript', image: js },
-      { name: 'HTML', image: html },
-      { name: 'CSS', image: css },
-      // { name: 'Common Lisp', image: lisp }, not as relevent
 
-      { name: 'PHP', image: php },
-      { name: 'C', image: c },
+    const url = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
+
+    const programmingSkills = [
+      { name: 'Python', image: `${url}/python/python-original.svg` , badge: "https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white" },
+      { name: 'Java', image: `${url}/java/java-original.svg` , badge: "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"},
+      { name: 'Bash', image: `${url}/bash/bash-original.svg` , badge: "https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=for-the-badge&logo=GNU-Bash&logoColor=white"},
+      { name: 'JavaScript', image: js , badge: "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E}"},
+      { name: 'HTML', image: html , badge: "https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white" },
+      { name: 'CSS', image: css , badge: "https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white" },
+      // { name: 'Common Lisp', image: lisp }, not as relevent
+      { name: 'C', image: c , badge: "https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"},
       // { name: 'C++', image: cpp }, not that experienced
-      { name: 'C#', image: csharp },
-      { name: 'Perl', image: perl },
-      { name: 'Ruby', image: ruby },
-      { name: 'MySQL', image: mysql }
+      { name: 'C#', image: csharp , badge: "https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white"},
+      { name: 'PHP', image: php , badge: "https://img.shields.io/badge/PHP-777BB4.svg?style=for-the-badge&logo=PHP&logoColor=white" },
+      { name: 'Perl', image: perl , badge: "https://img.shields.io/badge/Perl-39457E.svg?style=for-the-badge&logo=Perl&logoColor=white" },
+      { name: 'Ruby', image: ruby , badge: "https://img.shields.io/badge/Ruby-CC342D.svg?style=for-the-badge&logo=Ruby&logoColor=white" },
+      { name: 'MySQL', image: mysql , badge: "https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white" }
     ];
+
     const developerTools = [
-      { name: 'Git', image: git },
-      { name: 'Vscode', image: vscode },
-      { name: 'Eclipse', image: eclipse },
-      { name: 'Linux (Ubuntu)', image: ubuntu },
-      { name: 'Figma', image: figma },
-      { name: 'Unity', image: unity }
+      { name: 'Git', image: git , badge: "https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=Git&logoColor=white"},
+      { name: 'Linux (Ubuntu)', image: ubuntu , badge: "https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=Ubuntu&logoColor=white"},
+      { name: 'Figma', image: figma , badge: "https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white"},
+      { name: 'Unity', image: unity , badge: "https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white"},
+      { name: 'Eclipse', image: eclipse , badge: "https://img.shields.io/badge/Eclipse%20IDE-2C2255.svg?style=for-the-badge&logo=Eclipse-IDE&logoColor=white"},
+      { name: 'Vscode', image: vscode , badge: "https://img.shields.io/badge/Visual%20Studio%20Code-007ACC.svg?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white"}
       // { name: 'Vim', image: vim }, //didnt add for design purposes (adds a new line with only 1 language)
     ];
     // State to check if each section is in view
@@ -115,7 +117,7 @@ export const Skills = () => {
     opacity: 1,
     transform: 'translateX(0)',
     from: { opacity: 0, transform: 'translateX(50px)' },
-    config: config.gentle, // Adjust the config as needed
+    config: config.gentle
   }
 );
 
@@ -129,7 +131,7 @@ return (
       {/* Title & button */}
       <div className="headerBox">
         <div className="title">
-          <h1>Skills</h1>
+          <h1 >Skills</h1>
         </div>
         
         <div className="toggleButton">
@@ -151,11 +153,14 @@ return (
             <h2>Programming</h2>
             {isListView ? (
               <Row className="justify-content-center">
-                {/* goes through each programming language and places the image with text */}
+                {/* goes through each programming language with text */}
                 {slideInAnimation.map((props, index) => (
                   <Col key={index} xs={6} sm={4} md={2}>
                     <animated.div style={props} className="list-item">
-                      <p>{programmingSkills[index]?.name}</p>
+                      <div>
+                        <img src={programmingSkills[index]?.badge} alt="" onerror="this.style.display='none'" className="badgeIcon"/>
+                        <pre> </pre>
+                      </div>
                     </animated.div>
                   </Col>
                 ))}
@@ -174,7 +179,8 @@ return (
                       <p>{programmingSkills[index]?.name}</p>
                     </animated.div>
                   </Col>
-                ))}
+                )
+                )}
               </Row>
             )}
           </div>
@@ -188,12 +194,15 @@ return (
           >
             <h2>Developer Tools</h2>
             {isListView ? (
-              <Row className="justify-content-center">
-                {/* goes through each developer tool and places the image with text */}
+              <Row className="justify-content-center developerToolsText">
+                {/* goes through each developer tool with text */}
                 {slideInAnimation.map((props, index) => (
                   <Col key={index} xs={4} md={2}>
                     <animated.div style={props} className="list-item">
-                      <p>{developerTools[index]?.name}</p>
+                    <div>
+                        <img src={developerTools[index]?.badge} alt="" onerror="this.style.display='none'" className="badgeIcon"/>
+                        <pre> </pre>
+                      </div>
                     </animated.div>
                   </Col>
                 ))}
