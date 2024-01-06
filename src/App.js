@@ -13,6 +13,7 @@ function App() {
       <Banner/>
       <AboutMe/>
       <Skills/>
+      <Banner/>
     </div>
   );
 }
