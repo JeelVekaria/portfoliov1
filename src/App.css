@@ -317,7 +317,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /****************** Skills CSS *******************/
 /* SkillsSection.css */
 .skills img {
-  width:80%
+  width:75%
 }
 
 .skills Button{
@@ -377,6 +377,50 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+/****************** Projects CSS *******************/
+.detailedView .header{
+  height:14px;
+  margin-top:2px;
+}
+.modal-backdrop {
+  z-index: 100000 !important;
+}
+.modal {
+  z-index: 100001 !important;
+}
+
+
+.detailedView{
+  color:black;
+  margin-top:40px;
+}
+
+.detailedView .tags{
+  margin-right:auto;
+}
+
+.detailedView p{
+  margin-bottom:-10px;
+  padding:3px;
+}
+
+.detailedView .tag{
+  padding:4px;
+  margin-right:6px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px;
+  margin-right: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tag:hover {
+  transform: scale(1.1);
+	filter:  brightness(120%) ;
+}
 
 /****************** Default App CSS *******************/
 
