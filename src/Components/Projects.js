@@ -32,6 +32,16 @@ import project06a from "../assets/img/project06a.png"
 import project06b from "../assets/img/project06b.png"
 import project06c from "../assets/img/project06c.png"
 
+import project07a from "../assets/img/project07a.png"
+import project07b from "../assets/img/project07b.png"
+import project07c from "../assets/img/project07c.png"
+import project07d from "../assets/img/project07d.png"
+
+import project08a from "../assets/img/project08a.png"
+import project08b from "../assets/img/project08b.png"
+import project08c from "../assets/img/project08c.png"
+import project08d from "../assets/img/project08d.png"
+
 export const Projects = () => {
   // programming language badges
   let python = "https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white",
@@ -55,7 +65,8 @@ export const Projects = () => {
   api = "https://img.shields.io/badge/Rapid-0055DA.svg?style=for-the-badge&logo=Rapid&logoColor=white",
   unity = "https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white",
   android = "https://img.shields.io/badge/Android-34A853.svg?style=for-the-badge&logo=Android&logoColor=white",
-  numpy = "https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white";
+  numpy = "https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white",
+  pandas = "https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white";
   
   const projectsData = [
     {
@@ -71,8 +82,8 @@ export const Projects = () => {
       summary: 'Chrome extension that summarizes articles/bodies of text with just one click',
       tags: [html, css, js, api],
       images: [project02a, project02b, project02c],
-      details: 'This is a project me and my friends worked on called QuickSum. QuickSum is a Chrome extension that condenses lengthy content into easily digestible snippets, preserving key insights without overwhelming details, solving time/reading constraints. Using HTML, CSS, and JavaScript, we crafted an intuitive browsing experience. An AI-powered text summarization API streamlined content processing for accurate summaries. Integrating the AI Summarizer API was tough initially, but our persistence led to a user-friendly extension revolutionizing content consumption.',
-      link: 'https://google.com',
+      details: 'This is a project my friends and I worked on called QuickSum. QuickSum is a Chrome extension that condenses lengthy content into easily digestible snippets, preserving key insights without overwhelming details, solving time/reading constraints. Using HTML, CSS, and JavaScript, we crafted an intuitive browsing experience. An AI-powered text summarization API streamlined content processing for accurate summaries. Integrating the AI Summarizer API was tough initially, but our persistence led to a user-friendly extension revolutionizing content consumption.',
+      link: 'https://github.com/muntalee/quick-sum',
     },    
     {
       name: 'Photograph Database',
@@ -80,7 +91,7 @@ export const Projects = () => {
       tags: [mysql, php, ubuntu,linuxserver],
       images: [project05a, project05b, project05c],
       details: 'Database made using MySQL hosted on an Ubuntu Linux Server holding information about photographs. These photographs are displayed onto 2 websites, first website is the table sorted by the Date Taken, and other website shows photographs based on the location and date chosen by the user.',
-      link: 'https://google.com',
+      link: 'https://github.com/JeelVekaria/Photograph-Database',
     },
     {
       name: 'Endless Neon Jump',
@@ -91,6 +102,14 @@ export const Projects = () => {
       link: 'https://github.com/JeelVekaria/endless-neon-jump',
     },
     {
+      name: 'ChatGPT Ethical Analysis in Academia',
+      summary: 'Research project that conducted the use of ChatGPT in Academia via surveys to build visual models using Python',
+      tags: [python, numpy, pandas],
+      images: [project07a, project07b, project07c, project07d],
+      details: 'Research project that I and a group of 4 students conducted the use of ChatGPT in Academia, namely universities and colleges. Data was collected through surveys and after a collection of 100 submissions. We fed that data into our Python code which imported Pandas, Numpy, and Matplotlib, for data visualization. We prepared a presentation and a report conducting our findings in this research.',
+      link: 'https://github.com/JeelVekaria/ChatGPT-Ethical-Analysis-in-Academia',
+    },
+    {
       name: 'Pokemon 2 Player Battle Simulation',
       summary: 'Recreation of a Pokemon battle simulation between two players alternating turns with 3 Pokemons each to choose from',
       tags: [java],
@@ -98,7 +117,6 @@ export const Projects = () => {
       details: 'Recreated a Pokemon game where user clicks anywhere from homescreen to begin the battle. Once the battle begins, it is Player 1\'s turn to Attack (shown as "Fight" in game) or Swap(shown as "Pokemon" in game). Attack inflicts random amount of damage to the opponent. Swap allows the user to swap Pokemons. After Player 1 completed their turn, Player 2\'s turn is up, and has the same functionality as Player 1 with Attack and Swap. A fainted Pokemon is indicated when they are unable to attack anymore and when opening the Swap menu, that pokemon button is dulled. The battle continues until either side runs out of Pokemons, and a winner is declared.',
       link: 'https://github.com/JeelVekaria/Pokemon-Game',
     },
-
     {
       name: 'Connect Four',
       summary: 'Connect Four game alternating between two players made using the Pygame library',
@@ -108,13 +126,13 @@ export const Projects = () => {
       link: 'https://github.com/JeelVekaria/Connect-Four',
     },
     {
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js],
-      images: [project00, project00, project00],
-      details: 'Long project summary',
-      link: 'https://google.com',
-    }
+      name: 'Music Player App',
+      summary: 'Developed an audio content system with advanced search, download modifications, exception handling, file I/O, and maps.',
+      tags: [java],
+      images: [project08a, project08b, project08c, project08d],
+      details: 'This project focuses on creating an audio content management system, similar to Spotify or Apple Music. It incorporates features like search functionalities based on title, artist, and genre. The download action is modified to support ranges and artist or genre-specific downloads. Exception handling is implemented using custom exception classes, and file I/O is used to read audio content information from a file, which is shown after the user types "store" as input. Furthermore, the project focuses on object-oriented programming principles to organize and structure the code, utilizing classes and methods for a modular and scalable design, in addition to the use of maps enhances search efficiency within the system.',
+      link: 'https://github.com/JeelVekaria/Music-Player-App',
+    },
   ];
 const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
