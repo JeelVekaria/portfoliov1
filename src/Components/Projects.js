@@ -28,9 +28,9 @@ import project05a from "../assets/img/project05a.png"
 import project05b from "../assets/img/project05b.png"
 import project05c from "../assets/img/project05c.png"
 
-// import project06a from "../assets/img/project06a.png"
-// import project06b from "../assets/img/project06b.png"
-// import project06c from "../assets/img/project06c.png"
+import project06a from "../assets/img/project06a.png"
+import project06b from "../assets/img/project06b.png"
+import project06c from "../assets/img/project06c.png"
 
 export const Projects = () => {
   // programming language badges
@@ -54,7 +54,8 @@ export const Projects = () => {
   react = "https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black",
   api = "https://img.shields.io/badge/Rapid-0055DA.svg?style=for-the-badge&logo=Rapid&logoColor=white",
   unity = "https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white",
-  android = "https://img.shields.io/badge/Android-34A853.svg?style=for-the-badge&logo=Android&logoColor=white";
+  android = "https://img.shields.io/badge/Android-34A853.svg?style=for-the-badge&logo=Android&logoColor=white",
+  numpy = "https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white";
   
   const projectsData = [
     {
@@ -71,6 +72,14 @@ export const Projects = () => {
       tags: [html, css, js, api],
       images: [project02a, project02b, project02c],
       details: 'This is a project me and my friends worked on called QuickSum. QuickSum is a Chrome extension that condenses lengthy content into easily digestible snippets, preserving key insights without overwhelming details, solving time/reading constraints. Using HTML, CSS, and JavaScript, we crafted an intuitive browsing experience. An AI-powered text summarization API streamlined content processing for accurate summaries. Integrating the AI Summarizer API was tough initially, but our persistence led to a user-friendly extension revolutionizing content consumption.',
+      link: 'https://google.com',
+    },    
+    {
+      name: 'Photograph Database',
+      summary: 'Database using MySQL & PHP holding information about photographs displayed onto websites',
+      tags: [mysql, php, ubuntu,linuxserver],
+      images: [project05a, project05b, project05c],
+      details: 'Database made using MySQL hosted on an Ubuntu Linux Server holding information about photographs. These photographs are displayed onto 2 websites, first website is the table sorted by the Date Taken, and other website shows photographs based on the location and date chosen by the user.',
       link: 'https://google.com',
     },
     {
@@ -89,21 +98,14 @@ export const Projects = () => {
       details: 'Recreated a Pokemon game where user clicks anywhere from homescreen to begin the battle. Once the battle begins, it is Player 1\'s turn to Attack (shown as "Fight" in game) or Swap(shown as "Pokemon" in game). Attack inflicts random amount of damage to the opponent. Swap allows the user to swap Pokemons. After Player 1 completed their turn, Player 2\'s turn is up, and has the same functionality as Player 1 with Attack and Swap. A fainted Pokemon is indicated when they are unable to attack anymore and when opening the Swap menu, that pokemon button is dulled. The battle continues until either side runs out of Pokemons, and a winner is declared.',
       link: 'https://github.com/JeelVekaria/Pokemon-Game',
     },
+
     {
-      name: 'Photograph Database',
-      summary: 'Short project summary.',
-      tags: [mysql, ubuntu,linuxserver],
-      images: [project05a, project05b, project05c],
-      details: 'Long project summary',
-      link: 'https://google.com',
-    },
-    {
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js],
-      images: [project00, project00, project00],
-      details: 'Long project summary',
-      link: 'https://google.com',
+      name: 'Connect Four',
+      summary: 'Connect Four game alternating between two players made using the Pygame library',
+      tags: [python],
+      images: [project06a, project06b, project06c],
+      details: 'Connect Four game alternating between two players made using the Pygame library. To choose which column to drop the piece in, press the any number 1-7 corresponding to the column to drop it in. To drop the piece in, press Space and watch it fall down into its position. Game ends when there is a winner of 4 (or more) pieces aligned horizontally, vertically, or diagonally.',
+      link: 'https://github.com/JeelVekaria/Connect-Four',
     },
     {
       name: 'Project Name',
