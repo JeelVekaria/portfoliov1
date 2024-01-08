@@ -83,11 +83,11 @@ export const Projects = () => {
     },
     {
       name: 'Pokemon 2 Player Battle Simulation',
-      summary: 'Short project summary.',
-      tags: [python, java, js],
+      summary: 'Recreation of a Pokemon battle simulation between two players alternating turns with 3 Pokemons each to choose from',
+      tags: [java],
       images: [project04a, project04b, project04c, project04d ],
-      details: 'Long project summary',
-      link: 'https://google.com',
+      details: 'Recreated a Pokemon game where user clicks anywhere from homescreen to begin the battle. Once the battle begins, it is Player 1\'s turn to Attack (shown as "Fight" in game) or Swap(shown as "Pokemon" in game). Attack inflicts random amount of damage to the opponent. Swap allows the user to swap Pokemons. After Player 1 completed their turn, Player 2\'s turn is up, and has the same functionality as Player 1 with Attack and Swap. A fainted Pokemon is indicated when they are unable to attack anymore and when opening the Swap menu, that pokemon button is dulled. The battle continues until either side runs out of Pokemons, and a winner is declared.',
+      link: 'https://github.com/JeelVekaria/Pokemon-Game',
     },
     {
       name: 'Project Name',
