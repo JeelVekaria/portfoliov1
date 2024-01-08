@@ -24,9 +24,9 @@ import project04b from "../assets/img/project04b.png"
 import project04c from "../assets/img/project04c.png"
 import project04d from "../assets/img/project04d.png"
 
-// import project05a from "../assets/img/project05a.png"
-// import project05b from "../assets/img/project05b.png"
-// import project05c from "../assets/img/project05c.png"
+import project05a from "../assets/img/project05a.png"
+import project05b from "../assets/img/project05b.png"
+import project05c from "../assets/img/project05c.png"
 
 // import project06a from "../assets/img/project06a.png"
 // import project06b from "../assets/img/project06b.png"
@@ -50,7 +50,7 @@ export const Projects = () => {
   ruby = "https://img.shields.io/badge/Ruby-CC342D.svg?style=for-the-badge&logo=Ruby&logoColor=white",
   mysql = "https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white",
   linuxserver = "https://img.shields.io/badge/LinuxServer-DA3B8A.svg?style=for-the-badge&logo=LinuxServer&logoColor=white",
-  ubunutu = "https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=Ubuntu&logoColor=white",
+  ubuntu = "https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=Ubuntu&logoColor=white",
   react = "https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black",
   api = "https://img.shields.io/badge/Rapid-0055DA.svg?style=for-the-badge&logo=Rapid&logoColor=white",
   unity = "https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white",
@@ -90,10 +90,10 @@ export const Projects = () => {
       link: 'https://github.com/JeelVekaria/Pokemon-Game',
     },
     {
-      name: 'Project Name',
+      name: 'Photograph Database',
       summary: 'Short project summary.',
-      tags: [python, java, js],
-      images: [project00, project00, project00],
+      tags: [mysql, ubuntu,linuxserver],
+      images: [project05a, project05b, project05c],
       details: 'Long project summary',
       link: 'https://google.com',
     },
