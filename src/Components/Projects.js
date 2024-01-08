@@ -5,10 +5,32 @@ import { useTrail, animated, useSpring } from 'react-spring';
 // placeholder
 import portfolio from "../assets/img/portfolio1.png"
 
+import project00 from "../assets/img/project00.png"
 // projects
 import project01a from "../assets/img/project01a.png"
 import project01b from "../assets/img/project01b.png"
 import project01c from "../assets/img/project01c.png"
+
+import project02a from "../assets/img/project02a.png"
+import project02b from "../assets/img/project02b.png"
+import project02c from "../assets/img/project02c.png"
+
+import project03a from "../assets/img/project03a.png"
+import project03b from "../assets/img/project03b.png"
+// import project03c from "../assets/img/project03c.png"
+
+import project04a from "../assets/img/project04a.png"
+import project04b from "../assets/img/project04b.png"
+import project04c from "../assets/img/project04c.png"
+import project04d from "../assets/img/project04d.png"
+
+// import project05a from "../assets/img/project05a.png"
+// import project05b from "../assets/img/project05b.png"
+// import project05c from "../assets/img/project05c.png"
+
+// import project06a from "../assets/img/project06a.png"
+// import project06b from "../assets/img/project06b.png"
+// import project06c from "../assets/img/project06c.png"
 
 export const Projects = () => {
   // programming language badges
@@ -29,173 +51,68 @@ export const Projects = () => {
   mysql = "https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white",
   linuxserver = "https://img.shields.io/badge/LinuxServer-DA3B8A.svg?style=for-the-badge&logo=LinuxServer&logoColor=white",
   ubunutu = "https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=Ubuntu&logoColor=white",
-  react = "https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black";
+  react = "https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black",
+  api = "https://img.shields.io/badge/Rapid-0055DA.svg?style=for-the-badge&logo=Rapid&logoColor=white",
+  unity = "https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white",
+  android = "https://img.shields.io/badge/Android-34A853.svg?style=for-the-badge&logo=Android&logoColor=white";
   
   const projectsData = [
-    /*{
-      
-      name: 'Template',
-      summary: 'Short project summary',
-      tags: [python, java, js, c,
-        cs,
-        bash,
-        html,
-        css,
-        bootstrap,
-        tailwind,
-        jquery,
-        php,
-        perl,
-        ruby,
-        mysql,
-        linuxserver,
-        ubunutu,
-        react],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    */
     {
       name: 'Portfolio',
-      summary: 'A personal portfolio made from React to store all my current & upcoming projects.',
+      summary: 'Personal portfolio made from React to store all my current & upcoming projects',
       tags: [react, js, html, css, bootstrap],
       images: [project01a, project01b, project01c],
       details: 'A personal portfolio project where I used React for my first time. Luckily I was experienced in using HTML/CSS/Javascript & Bootstrap from my Web Development class, so learning React from scratch wasn\'t too difficult. A huge part of the graphics was made/edited using Figma which I\'ve been using for over 5 years. I plan on making more websites using different frameworks such as Angular and Django sometime, so keep an eye out on my project tab if they pop up!',
-      link: 'https://project1.com',
+      link: 'https://github.com/JeelVekaria/portfoliov1',
     },
     {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
+      name: 'QuickSum',
+      summary: 'Chrome extension that summarizes articles/bodies of text with just one click',
+      tags: [html, css, js, api],
+      images: [project02a, project02b, project02c],
+      details: 'This is a project me and my friends worked on called QuickSum. QuickSum is a Chrome extension that condenses lengthy content into easily digestible snippets, preserving key insights without overwhelming details, solving time/reading constraints. Using HTML, CSS, and JavaScript, we crafted an intuitive browsing experience. An AI-powered text summarization API streamlined content processing for accurate summaries. Integrating the AI Summarizer API was tough initially, but our persistence led to a user-friendly extension revolutionizing content consumption.',
+      link: 'https://google.com',
     },
     {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
+      name: 'Endless Neon Jump',
+      summary: 'Recreation of the classic Flappy Bird mobile game made from Unity and is currently in the process of being released on the Google Play Store',
+      tags: [cs, unity, android],
+      images: [project03a, project03b],
+      details: 'Recreated the infamous game Flappy Bird using Unity and C#. This was a project I worked on during my winter break having to learn Unity and C# from scratch but it was worth it to get this game running, although it is compatible with both Android and IOS, I am going to publish it for Android only due to its low publishing fees compared to IOS. Expected to be published prior to April 2024.',
+      link: 'https://github.com/JeelVekaria/endless-neon-jump',
     },
     {
-      
-      name: 'Project Name',
+      name: 'Pokemon 2 Player Battle Simulation',
       summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
+      tags: [python, java, js],
+      images: [project04a, project04b, project04c, project04d ],
+      details: 'Long project summary',
+      link: 'https://google.com',
     },
     {
-      
       name: 'Project Name',
       summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
+      tags: [python, java, js],
+      images: [project00, project00, project00],
+      details: 'Long project summary',
+      link: 'https://google.com',
     },
     {
-      
       name: 'Project Name',
       summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
+      tags: [python, java, js],
+      images: [project00, project00, project00],
+      details: 'Long project summary',
+      link: 'https://google.com',
     },
     {
-      
       name: 'Project Name',
       summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
-    {
-      
-      name: 'Project Name',
-      summary: 'Short project summary.',
-      tags: [python, java, js, c,
-        cs,
-  ],
-      images: [portfolio, portfolio, portfolio],
-      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat massa sed est sollicitudin, id fermentum elit mollis. Nullam facilisis erat nec magna venenatis faucibus. Fusce interdum feugiat orci, sed lacinia erat sodales eu. Aliquam neque nibh, consectetur maximus nulla ut, pulvinar commodo eros. Nullam hendrerit lectus at felis consectetur imperdiet. Sed vel viverra dui, vel elementum turpis. Nulla mattis et turpis et lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed lacus nunc. Fusce tempus eu ligula id viverra. Mauris vitae massa sapien.',
-      link: 'https://project1.com',
-    },
+      tags: [python, java, js],
+      images: [project00, project00, project00],
+      details: 'Long project summary',
+      link: 'https://google.com',
+    }
   ];
 const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -253,9 +170,9 @@ const [showModal, setShowModal] = useState(false);
           <Col xs={12}>
             <animated.div style={slideUpAnimation}>
               {/* cards */}
-              <Row>
+              <Row >
                 {projectsData.map((project, index) => (
-                  <Col key={index} xs={12} sm={6} md={4} lg={4} xl={4}>
+                  <Col key={index} xs={12} sm={12} md={6} lg={4}>
                     <Card className="mb-4" onClick={() => handleCardClick(project)} style={{ cursor: 'pointer' }}>
                       {/* project cover image */}
                       <Card.Img variant="top" src={`${project.images[0]}`} />

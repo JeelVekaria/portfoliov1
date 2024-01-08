@@ -387,6 +387,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 /****************** Projects CSS *******************/
+.card-body{
+  background-color: rgb(222, 222, 222);
+  height:200px;
+}
 .detailedView .header{
   height:14px;
   margin-top:2px;

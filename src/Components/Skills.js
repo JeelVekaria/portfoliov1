@@ -158,7 +158,7 @@ return (
                   <Col key={index} xs={6} sm={4} md={2}>
                     <animated.div style={props} className="list-item">
                       <div>
-                        <img src={programmingSkills[index]?.badge} alt="" onerror="this.style.display='none'" className="badgeIcon"/>
+                        <img src={programmingSkills[index]?.badge} alt="" className="badgeIcon"/>
                         <pre> </pre>
                       </div>
                     </animated.div>
