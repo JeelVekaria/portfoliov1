@@ -309,7 +309,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .aboutme img {
-  width:100%;
+  width:95%;
+  float:right;
+  margin-bottom:80px;
+  margin-right: 20px;
 }
 
 /****************** Skills CSS *******************/

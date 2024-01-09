@@ -200,7 +200,7 @@ return (
                   <Col key={index} xs={4} md={2}>
                     <animated.div style={props} className="list-item">
                     <div>
-                        <img src={developerTools[index]?.badge} alt="" onerror="this.style.display='none'" className="badgeIcon"/>
+                        <img src={developerTools[index]?.badge} alt="" className="badgeIcon"/>
                         <pre> </pre>
                       </div>
                     </animated.div>

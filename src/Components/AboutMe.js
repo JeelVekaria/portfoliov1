@@ -20,11 +20,10 @@ export const AboutMe = () => {
             <h1>HI THERE👋</h1>
             <h3>I am a computer programmer who :</h3>
             <ul>
-                <li>Enjoys eating cheese</li>
-                <li>Enjoys eating cheese</li>
-                <li>Enjoys eating cheese</li>
-                <li>Enjoys eating cheese</li>
-                <li>Enjoys eating cheese</li>
+                <li>Is currently working to get a BSc in Computer Science at Toronto Metropolitan University</li>
+                <li>Enjoys working on a range of fields, eg. UI/UX, Full-Stack Software Developer, Data Analytics, and anything Linux related </li>
+                <li>Takes pride in being a quick and adaptive learner</li>
+                <li>Finds space related stuff cool</li>
             </ul>
           </div>
         </Col>

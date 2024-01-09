@@ -35,7 +35,7 @@ export const Banner = () => {
 
         if(isDeleting) {
             // cuts delta speed in half
-            setDelta(prevDelta => prevDelta /2)
+            setDelta(prevDelta => prevDelta /1.5)
         }
 
         // if has reached full text
