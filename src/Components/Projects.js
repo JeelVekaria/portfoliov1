@@ -42,6 +42,12 @@ import project08b from "../assets/img/project08b.png"
 import project08c from "../assets/img/project08c.png"
 import project08d from "../assets/img/project08d.png"
 
+import project09a from "../assets/img/project09a.png"
+import project09b from "../assets/img/project09b.png"
+import project09c from "../assets/img/project09c.png"
+import project09d from "../assets/img/project09d.png"
+import project09e from "../assets/img/project09e.png"
+
 export const Projects = () => {
   // programming language badges
   let python = "https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white",
@@ -66,7 +72,9 @@ export const Projects = () => {
   unity = "https://img.shields.io/badge/Unity-000000.svg?style=for-the-badge&logo=Unity&logoColor=white",
   android = "https://img.shields.io/badge/Android-34A853.svg?style=for-the-badge&logo=Android&logoColor=white",
   numpy = "https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white",
-  pandas = "https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white";
+  pandas = "https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white",
+  figma = "https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white",
+  dora = "https://i.imgur.com/vmti2Hz.png";
   
   const projectsData = [
     {
@@ -132,6 +140,14 @@ export const Projects = () => {
       images: [project08a, project08b, project08c, project08d],
       details: 'This project focuses on creating an audio content management system, similar to Spotify or Apple Music. It incorporates features like search functionalities based on title, artist, and genre. The download action is modified to support ranges and artist or genre-specific downloads. Exception handling is implemented using custom exception classes, and file I/O is used to read audio content information from a file, which is shown after the user types "store" as input. Furthermore, the project focuses on object-oriented programming principles to organize and structure the code, utilizing classes and methods for a modular and scalable design, in addition to the use of maps enhances search efficiency within the system.',
       link: 'https://github.com/JeelVekaria/Music-Player-App',
+    },
+    {
+      name: '3D Website',
+      summary: 'Website featuring a 3D model of a Koi fish following the user as they scroll down',
+      tags: [figma, dora],
+      images: [project09a, project09b, project09c, project09d, project09e],
+      details: 'As the user scrolls down, a 3D model of a koi fish follows the user until the very bottom. The graphis and layout of this website was made using Figma, and the addition of the 3d model was made using Dora',
+      link: 'https://6lsjqm7z.dora.run/'
     },
   ];
 const [showModal, setShowModal] = useState(false);
