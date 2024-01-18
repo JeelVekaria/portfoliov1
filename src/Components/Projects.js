@@ -48,6 +48,10 @@ import project09c from "../assets/img/project09c.png"
 import project09d from "../assets/img/project09d.png"
 import project09e from "../assets/img/project09e.png"
 
+import project10a from "../assets/img/project10a.png"
+import project10b from "../assets/img/project10b.png"
+import project10c from "../assets/img/project10c.gif"
+
 export const Projects = () => {
   // programming language badges
   let python = "https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white",
@@ -93,6 +97,14 @@ export const Projects = () => {
       details: 'This is a project my friends and I worked on called QuickSum. QuickSum is a Chrome extension that condenses lengthy content into easily digestible snippets, preserving key insights without overwhelming details, solving time/reading constraints. Using HTML, CSS, and JavaScript, we crafted an intuitive browsing experience. An AI-powered text summarization API streamlined content processing for accurate summaries. Integrating the AI Summarizer API was tough initially, but our persistence led to a user-friendly extension revolutionizing content consumption.',
       link: 'https://github.com/muntalee/quick-sum',
     },    
+    {
+      name: 'Djikstra Pathfinding Algorithm',
+      summary: 'Finds the shortest route between 2 nodes navigating around walls',
+      tags: [python],
+      images: [project10a, project10b, project10c],
+      details: 'Finds the shortest route between 2 nodes navigating around walls using Djikstra Algorithm. Hover over a node and press S to place a starting node. Similarly, press E to place an ending node. Press Space to start algorithm.',
+      link: 'https://github.com/JeelVekaria/Pathfinding---Python',
+    },
     {
       name: 'Photograph Database',
       summary: 'Database using MySQL & PHP holding information about photographs displayed onto websites',
